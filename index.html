@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>InLock - Personagens</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table id="tabela-lista">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Título</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela-lista-corpo"></tbody>
+    </table>
+    <script>
+        let personagens = [
+            {
+                nome: "Homem-Aranha",
+                lancamento: "Amazing Fantasy #15 (1962)",
+                urlImagem: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjahaSV9aThAhVBR6wKHXiCCiMQjRx6BAgBEAU&url=https%3A%2F%2Faminoapps.com%2Fc%2Fmarvel-comics-amino-br%2Fpage%2Fblog%2Famazing-fantasy-15%2FV058_XngH7u5VNq2NxpEXlnJpK01GXzDVEo&psig=AOvVaw04vFmR_LA49y4g_eDmqJfY&ust=1553865211268205"
+            }
+        ];
+
+        fetch(URL)
+        .then(resposta => resposta.json())
+        .then(data => preencherTabela(data))
+        .catch(erro => console.error(error, 'erro'));
+
+
+        let tabela = document.querySelector("#tabela-lista-corpo");
+
+        function preencherTabela(personagens){
+
+        let novaLinha = document.createElement("tr");
+
+        let colunaNome = document.createElement("td");
+        colunaNome.innerText = element.nome;
+        let colunaLancamento = document.createElement("td");
+        colunaLancamento.innerText = element.lancamento;
+        let colunaUrlImagem = document.createElement("td");
+        colunaUrlImagem.innerHTML = "img:urlImagem ";
+
+        novaLinha.appendChild(colunanome);
+        novaLinha.appendChild(colunalancamento);
+        novaLinha.appendChild(colunaurlmagem);
+
+        tabela.appendChild(novaLinha);
+        }
+    </script>
+</body>
+
+</html>
